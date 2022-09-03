@@ -1,0 +1,39 @@
+---
+layout: site.njk
+---
+
+{% set js %}
+{% include "src/scripts/" + page.fileSlug + ".js" %}
+{% endset %}
+
+<h1>{{ title }}</h1>
+
+<h2>Installation</h2>
+
+<div>
+  <a href="{{ js | jsmin }}" class="jsbutton">{{ actionName | default(title) }}</a>
+  ←Please drag &amp; drop this link to bookmark bar
+</div>
+<div>
+  <div>
+    or copy &amp; paste code below
+  </div>
+  <div>
+    <input type="text" readonly value="{{js | jsmin}}" onfocus="this.select()" onclick="this.select()" class="jsinput">
+  </div>
+</div>
+
+<h2>Description</h2>
+
+{{ content | safe }}
+
+<h2>Source code</h2>
+
+<code>{{ page.fileSlug }}.js</code>
+
+<pre>{{ js }}</pre>
+
+<h2>Minified source code</h2>
+
+<pre>{{ js | jsmin }}</pre>
+
