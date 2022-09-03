@@ -25,6 +25,10 @@ module.exports = function (eleventyConfig) {
     return code.replace(/"/g, '\\"');
   });
 
+  eleventyConfig.addCollection("scripts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/scripts/**/*").slice().reverse();
+  });
+
   return {
     dir: {
       input: "src",
