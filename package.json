@@ -10,6 +10,7 @@
     "terser": "^5.15.0"
   },
   "scripts": {
-    "dev": "eleventy --serve"
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   }
 }
