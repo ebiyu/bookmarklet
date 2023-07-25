@@ -6,15 +6,17 @@ layout: site.njk
 {% include "src/scripts/" + page.fileSlug + ".js" %}
 {% endset %}
 
+<div class="script-page">
+
 <h1>{{ title }}</h1>
 
 <h2>Installation</h2>
 
 <div>
   <a href="{{ js | jsmin }}" class="jsbutton">{{ actionName | default(title) }}</a>
-  ←Please drag &amp; drop this link to bookmark bar
+  ←Please drag &amp; drop this button to bookmark bar
 </div>
-<div>
+<div class="jsinput-section">
   <div>
     or copy &amp; paste code below
   </div>
@@ -29,11 +31,31 @@ layout: site.njk
 
 <h2>Source code</h2>
 
-<code>{{ page.fileSlug }}.js</code>
+<a
+  href="https://github.com/ebiyuu1121/bookmarklet/blob/main/src/scripts/{{ page.fileSlug }}.js"
+  target="_blank" rel="noreferrer"
+>
+  <i class="fa-brands fa-github"></i>
+  {{ page.fileSlug }}.js
+</a>
 
-<pre>{{ js }}</pre>
+
+{% highlight "js" %}
+{{ js | safe }}
+{% endhighlight %}
 
 <h2>Minified source code</h2>
 
-<pre>{{ js | jsmin }}</pre>
+{% highlight "js" %}
+{{ js | jsmin | safe }}
+{% endhighlight %}
 
+<a
+  href="https://github.com/ebiyuu1121/bookmarklet/blob/main/src/scripts/{{ page.fileSlug }}.md"
+  target="_blank" rel="noreferrer"
+>
+  <i class="fa-brands fa-github"></i>
+  Edit this page
+</a>
+
+</div>

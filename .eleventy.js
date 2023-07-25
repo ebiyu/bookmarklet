@@ -1,8 +1,10 @@
 const { minify } = require("terser");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget("./src/scripts/**/*.js");
 
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addPassthroughCopy("./src/*.css");
 

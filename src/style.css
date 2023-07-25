@@ -6,11 +6,17 @@
   background-color: green;
   padding: 12px;
   color: white;
+  display: flex;
+  justify-content: space-between;
 }
 
 .header a {
   color: white;
   text-decoration: none;
+}
+
+main {
+  padding: 12px;
 }
 
 .footer {
@@ -37,6 +43,12 @@
   margin: 4px;
   padding: 12px;
   text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 2px 2px 2px lightgray;
+}
+
+.jsinput-section {
+  margin-top: 12px;
 }
 
 .jsinput {
@@ -44,3 +56,19 @@
   width: 100%;
 }
 
+.filename {
+  background-color: lightgray;
+}
+
+
+.script-page h2 {
+  border-left: green solid .3em;
+  padding: 5px;
+  padding-left: 0.5em;
+  background-color: palegreen;
+}
+
+.script-page h3 {
+  border-bottom: green solid .2em;
+  padding: 5px;
+}

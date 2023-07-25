@@ -5,11 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/normalize.css">
     <link rel="stylesheet" href="/style.css">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/94bd66272b.js" crossorigin="anonymous"></script>
     <title>{{title}} - Yusuke Ebihara</title>
   </head>
   <body>
     <div class="header">
-      <a href="/">Bookmarklet marketplace</a>
+      <div class="header__left">
+        <a href="/">Ebi's bookmarklet</a>
+      </div>
+      <div class="header__right">
+        <a href="https://github.com/ebiyuu1121/bookmarklet" target="_blank">
+          <i class="fa-brands fa-github fa-xl"></i>
+        </a>
+      </div>
     </div>
     <main>
       {{ content | safe }}
