@@ -12,8 +12,6 @@ function getId() {
   return null;
 }
 
-const url = location.href;
-
 const p = getId();
 if (!p) {
   window.alert("Amazonの商品ページではありません");
